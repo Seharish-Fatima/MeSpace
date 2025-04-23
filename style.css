@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -43,7 +45,7 @@ body {
   flex-direction: row;
 }
 
-img {
+.logo-image {
   margin-top: 50px;
   margin-right: 15px;
   width: 150px;
@@ -63,4 +65,69 @@ img {
   color: #1c1c1e;
   font-family: "Poppins", sans-serif;
   font-style: italic;
+}
+
+.cards-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: #f4dada;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #b76679;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  background-color: #b76679;
+  width: 100%;
+  height: 20%;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #1c1c1e;
+}
+
+.image {
+  width: 100%;
+  height: 80%;
+  border-radius: 0px 0px 20px 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-10 img {
+  width: 300px;
+  height: 300px;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #1c1c1e;
 }
