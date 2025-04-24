@@ -3,15 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Seharish Fatima</title>
+    <meta
+      name="description"
+      content="Explore the creative portfolio of Seharish Fatima—where code meets aesthetic chaos. Discover her projects, blog, music picks, favorite books, and more."
+    />
+    <meta
+      name="keywords"
+      content="Seharish Fatima, Web Developer, Portfolio, Projects, Blog, Books, Spotify, Contact, Vision Board, Digital Toolbox, Chaos Coder"
+    />
+    <meta name="author" content="Seharish Fatima" />
+    <meta
+      property="og:title"
+      content="Seharish Fatima | Portfolio of Vibes, Code & Chaos"
+    />
+    <meta
+      property="og:description"
+      content="A portfolio like no other—explore the dreamy, code-filled, aesthetic world of Seharish Fatima."
+    />
+    <meta property="og:image" content="assets/dispaly.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <meta property="og:url" content="https://your-website.com" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="floating-stars"></div>
+    <div class="theme-toggle-wrapper">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <span class="tooltip-text">Wanna vibe shift? Click me 😘</span>
+    </div>
     <div class="hero">
-      <img src="assets/dispaly.jpg" class="logo-image" />
+      <img src="assets/dispaly.jpg" class="logo-image" alt="logo" />
       <div class="logo">
         <h1 class="name">Seharish Fatima</h1>
-        <h4 class="tags">Luxury-coded chaos, wrapped in ambition</h4>
+        <h4 class="tags">
+          <span id="typewriter"></span>
+        </h4>
       </div>
     </div>
     <div class="description">
@@ -31,7 +60,12 @@
         <div class="card card-1">
           <div class="card-title">The Story So Far</div>
           <div class="image">
-            <img src="/assets/aboutme.jpeg" width="300" height="300" />
+            <img
+              src="/assets/aboutme.jpeg"
+              width="300"
+              height="300"
+              alt="About Seharish Fatima - A glimpse into her journey"
+            />
           </div>
         </div>
       </a>
@@ -39,7 +73,12 @@
         <div class="card card-2">
           <div class="card-title">My Masterpieces</div>
           <div class="image">
-            <img src="/assets/Projects.jpeg" width="300" height="300" />
+            <img
+              src="/assets/Projects.jpeg"
+              width="300"
+              height="300"
+              alt="Seharish's Projects - Creative & Code-driven Work"
+            />
           </div>
         </div>
       </a>
@@ -47,7 +86,12 @@
         <div class="card card-3">
           <div class="card-title">Melodies & Mayhem</div>
           <div class="image">
-            <img src="/assets/Spotify.jpeg" width="300" height="300" />
+            <img
+              src="/assets/Spotify.jpeg"
+              width="300"
+              height="300"
+              alt="Music Favorites - Seharish's Spotify Picks"
+            />
           </div>
         </div>
       </a>
@@ -55,7 +99,12 @@
         <div class="card card-4">
           <div class="card-title">Reads & Reveries</div>
           <div class="image">
-            <img src="/assets/bookrecs.jpeg" width="300" height="300" />
+            <img
+              src="/assets/bookrecs.jpeg"
+              width="300"
+              height="300"
+              alt="Seharish's Book Recommendations"
+            />
           </div>
         </div>
       </a>
@@ -63,7 +112,12 @@
         <div class="card card-5">
           <div class="card-title">Let's Connect</div>
           <div class="image">
-            <img src="/assets/contact me.jpeg" width="300" height="300" />
+            <img
+              src="/assets/contact me.jpeg"
+              width="300"
+              height="300"
+              alt="Get in Touch with Seharish"
+            />
           </div>
         </div>
       </a>
@@ -71,7 +125,12 @@
         <div class="card card-6">
           <div class="card-title">Glimpses & Glimmers</div>
           <div class="image">
-            <img src="/assets/photodump.jpeg" width="300" height="300" />
+            <img
+              src="/assets/photodump.jpeg"
+              width="300"
+              height="300"
+              alt="Seharish's Photo Dump - Life in Snaps"
+            />
           </div>
         </div>
       </a>
@@ -79,7 +138,12 @@
         <div class="card card-7">
           <div class="card-title">Visions & Vibes</div>
           <div class="image">
-            <img src="/assets/visionboard.jpeg" width="300" height="300" />
+            <img
+              src="/assets/visionboard.jpeg"
+              width="300"
+              height="300"
+              alt="Vision Board - Dreams & Goals"
+            />
           </div>
         </div>
       </a>
@@ -87,7 +151,12 @@
         <div class="card card-8">
           <div class="card-title">My Digital Toolbox</div>
           <div class="image">
-            <img src="/assets/resources.jpeg" width="300" height="300" />
+            <img
+              src="/assets/resources.jpeg"
+              width="300"
+              height="300"
+              alt="Seharish's Digital Toolbox - Tools She Loves"
+            />
           </div>
         </div>
       </a>
@@ -95,18 +164,28 @@
         <div class="card card-9">
           <div class="card-title">Scribbles & Soliloquies</div>
           <div class="image">
-            <img src="/assets/blog.jpeg" width="300" height="300" />
+            <img
+              src="/assets/blog.jpeg"
+              width="300"
+              height="300"
+              alt="Blog - Scribbles & Thoughts"
+            />
           </div>
         </div>
       </a>
-      <a href="affirmations.html">
-        <div class="card card-10">
-          <div class="card-title">Gloss & Gratitude</div>
-          <div class="image">
-            <img src="/assets/affirmations.jpeg" width="300" height="300" />
-          </div>
+      <div class="card card-10">
+        <div class="card-title">Gloss & Gratitude</div>
+        <div class="image" id="affirmation-wrapper">
+          <img
+            id="affirmation-img"
+            src="/assets/affirmations.jpeg"
+            width="300"
+            height="300"
+            alt="Daily Affirmation - Positivity & Sparkle"
+          />
         </div>
-      </a>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </body>
 </html>
