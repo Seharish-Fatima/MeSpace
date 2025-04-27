@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
+
+:root {
+  --bg-color: #faf9f6;
+  --text-color: #1c1c1e;
+  --card-bg: #f4dada;
+  --card-shadow: #b76679;
+  --card-title-bg: #b76679;
+}
+
+body.dark-mode {
+  --bg-color: #1c1c1e;
+  --text-color: #faf9f6;
+  --card-bg: #2a2a2a;
+  --card-shadow: #ff8fab;
+  --card-title-bg: #ff8fab;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, var(--card-bg), var(--bg-color));
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 15px;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-heading {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #b76679;
+  font-size: 45px;
+}
+
+.hero-subtext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+.timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--card-shadow),
+    var(--card-shadow) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px var(--card-shadow);
+  max-width: 850px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
+  position: relative;
+  width: 45%;
+  z-index: 1;
+}
+
+.timeline-card.left {
+  align-self: flex-start;
+  margin-left: 0;
+}
+
+.timeline-card.right {
+  align-self: flex-end;
+  margin-right: 0;
+}
+
+.timeline-card:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 0px 10px 20px var(--card-shadow);
+}
+
+.card-header {
+  background-color: var(--card-title-bg);
+  color: var(--text-color);
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-caption {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  max-width: 500px;
+}
+
+.card-caption h3 {
+  font-size: 1.6rem;
+  color: var(--card-shadow);
+  margin-bottom: 10px;
+}
+
+.card-caption p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.card-timestamp {
+  font-size: 0.9rem;
+  font-family: "Great Vibes", cursive;
+  color: var(--card-shadow);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  padding: 60px 20px;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90vw;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px 6px 12px var(--card-shadow);
+  position: relative;
+  margin: auto; /* centers it horizontally */
+  animation: fadeIn 0.4s ease;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: var(--card-shadow);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--card-shadow);
+  margin-bottom: 20px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.modal-content p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.modal-content em {
+  font-style: italic;
+  color: var(--card-shadow);
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 14px;
+  opacity: 0.7;
+  animation: sparkleFloat 0.8s ease-out forwards;
+  pointer-events: none;
+  z-index: 999;
+  color: #ff8fab;
+  user-select: none;
+}
+
+@keyframes sparkleFloat {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-10px, -20px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.theme-toggle-wrapper,
+.back-arrow-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.theme-toggle-wrapper {
+  top: 20px;
+  right: -20px;
+}
+.back-arrow-wrapper {
+  top: 20px;
+  left: 20px;
+}
+
+.theme-toggle,
+.back-arrow {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: var(--text-color);
+}
+
+.theme-toggle:hover,
+.back-arrow:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.tooltip-text,
+.back-tooltip {
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: var(--card-title-bg);
+  border-radius: 8px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.theme-toggle-wrapper:hover .tooltip-text,
+.back-arrow-wrapper:hover .back-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-arrow {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+#film-strip {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  padding: 20px 0;
+}
+
+.film-track {
+  display: inline-flex;
+  align-items: center;
+  animation: scrollFilm 250s linear infinite; /* slowed down */
+  white-space: nowrap; /* super important */
+}
+
+.film-frame {
+  min-width: 300px;
+  background: #1a1a1a;
+  color: #faf9f6;
+  border: 2px dashed #faf9f6;
+  padding: 20px;
+  margin: 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transform: rotate(calc(var(--rotate, 0) * 1deg));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-frame:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 0 10px #ff8fab;
+}
+
+.film-icon {
+  font-size: 32px;
+  margin: 0 20px;
+  color: #faf9f6;
+}
+
+@keyframes scrollFilm {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* scroll halfway because we doubled frames */
+  }
+}
+
+/* Sprockets */
+.film-sprockets {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0 10px,
+    #faf9f6 10px 20px,
+    transparent 20px 30px
+  );
+  z-index: 1;
+}
+
+.top-sprockets {
+  top: 0;
+}
+
+.bottom-sprockets {
+  bottom: 0;
+}
+
+.floating-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: float infinite ease-in-out;
+  animation-duration: calc(
+    8s + 4s * random()
+  ); /* random duration for diversity */
+  pointer-events: none;
+}
+
+@keyframes floatStar {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(5px, 10px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 470px) {
+  body {
+    overflow-x: hidden;
+  }
+  .card-caption h3 {
+    font-size: 12px;
+  }
+  .card-caption p {
+    font-size: 10px;
+  }
+  .card-header {
+    font-size: 10px;
+    color: #1a1a1a;
+  }
+}
